@@ -6,6 +6,7 @@ import AllEvents from "./pages/AllEvents";
 import ViewEvent from "./pages/ViewEvent";
 import AllTickets from "./pages/allTickets";
 import CreateEvent from "./pages/createEvent";
+import TicketDetails from "./pages/ticketDetails";
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/events' element={<AllEvents/>} />
         <Route path='/tickets' element={<AllTickets/>} />
         <Route path='/createevents' element={<CreateEvent/>} />
+        <Route path='/ticketdetails' element={<TicketDetails/>} />
     </Routes>
     </div>
     {/* <MyFooter /> */}

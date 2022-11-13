@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { setManagerContract, createEvents } from "../../plugins/utils"
+
+setManagerContract()
 
 function CreateEvent() {
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [manager, setManager] = useState("");
+  const [description, setDescription] = useState("");
+  const [ticketcap, setTicketcap] = useState(0)
   const [isVerified, setIsVerified] = useState(true);
 
   const renderNotVerified = (
@@ -42,6 +50,8 @@ function CreateEvent() {
                       id="eventname"
                       name="eventname"
                       placeholder="Event Name"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                       required
                     />
                   </div>

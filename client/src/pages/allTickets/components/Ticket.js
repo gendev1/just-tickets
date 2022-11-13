@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Ticket() {
   return (
     <div className="column is-6 mb-5">
@@ -18,9 +19,12 @@ function Ticket() {
             <br />
             <br />
             <br />
+            <Link
+            to={"/ticketdetails"}>
             <button className="button btn-primary stretched-link">
               Details
             </button>
+            </Link>
           </div>
         </div>
       </div>
