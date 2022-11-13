@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import { TronWeb } from "tronweb";
 import logo from "../../assets/images/logo.png";
-import { getTronWeb } from "../../plugins/utils"
+import { getTronWeb } from "../../plugins/utils";
 
 // const tronWeb = new TronWeb({
 //   fullHost: server,
@@ -9,8 +9,6 @@ import { getTronWeb } from "../../plugins/utils"
 //   eventServer: server,
 //   privateKey: ""
 // });
-
-
 
 function MyNavBar() {
   return (
@@ -26,8 +24,9 @@ function MyNavBar() {
               src={logo}
               alt="just tickets"
               width="200px"
-            /></Link>
-          
+            />
+          </Link>
+
           <Link
             role="button"
             className="navbar-burger burger"
@@ -39,7 +38,7 @@ function MyNavBar() {
             <Link className="navbar-item" to={"/tickets"}>
               My Tickets
             </Link>
-            <Link className="navbar-item" to={"/events"}>
+            <Link className="navbar-item" to={"/governance"}>
               Governance
             </Link>
             <Link className="navbar-item" to={"/createevents"}>
@@ -48,8 +47,7 @@ function MyNavBar() {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-            </Link>
-            
+          </Link>
         </div>
 
         <div id="navbar-links" className="navbar-menu">
@@ -60,7 +58,7 @@ function MyNavBar() {
             <Link className="navbar-item" to={"/tickets"}>
               My Tickets
             </Link>
-            <Link className="navbar-item" to={"/events"}>
+            <Link className="navbar-item" to={"/governance"}>
               Governance
             </Link>
             <Link className="navbar-item" to={"/createevents"}>
@@ -70,7 +68,9 @@ function MyNavBar() {
 
           <div className="navbar-end ml-0">
             <div className="navbar-item py-0">
-              <Link onClick={getTronWeb} className="btn btn-sm btn-primary ml-4">
+              <Link
+                onClick={getTronWeb}
+                className="btn btn-sm btn-primary ml-4">
                 Connect Wallet
               </Link>
             </div>
