@@ -3,7 +3,6 @@ import banner from "../../assets/images/banner.jpeg";
 import EventCard from "../../common/components/Card";
 
 function HomePage() {
-
   return (
     <div className="home-page-container">
       <div className="container">
