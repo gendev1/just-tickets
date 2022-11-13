@@ -1,4 +1,4 @@
-import banner from "../../../assets/images/banner.jpeg";
+import { Link } from "react-router-dom";
 
 function EventCard({ heading, details, eventLink, imgUrl }) {
   return (
@@ -21,11 +21,11 @@ function EventCard({ heading, details, eventLink, imgUrl }) {
           <br />
           <br />
 
-          <a
-            href="list.html"
+          <Link
+            to={"/event"}
             className="button btn  is-fullwidth btn-sm btn-primary stretched-link">
             Go to event
-          </a>
+          </Link>
         </div>
       </div>
     </div>

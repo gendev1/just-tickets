@@ -1,4 +1,16 @@
+import { Link } from "react-router-dom";
+// import { TronWeb } from "tronweb";
 import logo from "../../assets/images/logo.png";
+import { getTronWeb } from "../../plugins/utils"
+
+// const tronWeb = new TronWeb({
+//   fullHost: server,
+//   solidityNode: server,
+//   eventServer: server,
+//   privateKey: ""
+// });
+
+
 
 function MyNavBar() {
   return (
@@ -8,46 +20,59 @@ function MyNavBar() {
       aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
-          <a href="index.html">
+          <Link to={"/"}>
             <img
               className="img-fluid"
               src={logo}
               alt="just tickets"
               width="200px"
-            />
-          </a>
-          <a
+            /></Link>
+          
+          <Link
             role="button"
             className="navbar-burger burger"
             aria-expanded="false"
             data-target="navbar-links">
+            <Link className="navbar-item" to={"/events"}>
+              Happenings
+            </Link>
+            <Link className="navbar-item" to={"/tickets"}>
+              My Tickets
+            </Link>
+            <Link className="navbar-item" to={"/events"}>
+              Governance
+            </Link>
+            <Link className="navbar-item" to={"/createevents"}>
+              Create Events
+            </Link>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+            </Link>
+            
         </div>
 
         <div id="navbar-links" className="navbar-menu">
           <div className="navbar-start ml-auto">
-            <a className="navbar-item" href="index.html">
+            <Link className="navbar-item" to={"/events"}>
               Happenings
-            </a>
-            <a className="navbar-item" href="list.html">
+            </Link>
+            <Link className="navbar-item" to={"/tickets"}>
               My Tickets
-            </a>
-            <a className="navbar-item" href="list.html">
-              Merchandise
-            </a>
-            <a className="navbar-item" href="search.html">
-              Create Event
-            </a>
+            </Link>
+            <Link className="navbar-item" to={"/events"}>
+              Governance
+            </Link>
+            <Link className="navbar-item" to={"/createevents"}>
+              Create Events
+            </Link>
           </div>
 
           <div className="navbar-end ml-0">
             <div className="navbar-item py-0">
-              <a href="contact.html" className="btn btn-sm btn-primary ml-4">
+              <Link onClick={getTronWeb} className="btn btn-sm btn-primary ml-4">
                 Connect Wallet
-              </a>
+              </Link>
             </div>
           </div>
         </div>

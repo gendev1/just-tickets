@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import banner from "../../assets/images/banner.jpeg";
-import Web3Modal from "web3modal";
-import { ethers } from "ethers";
-
-import EventCard from "./components/Card";
-import axios from "axios";
+import EventCard from "../../common/components/Card";
 
 function HomePage() {
-  const [events, setEvents] = useState([]);
 
   return (
     <div className="home-page-container">
